@@ -27,7 +27,7 @@ bonus: $(NAME) $(BOBJS)
 	$(CC) $(FLAGS) -c $(BSRCS)
 	ar -rcs $(NAME) $(BOBJS)
 
-all: $(NAME)i
+all: $(NAME)
 
 clean:
 	rm -f $(OBJS) $(BOBJS)
