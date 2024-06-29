@@ -221,11 +221,51 @@ int main(void)
 	size_t len = 10;
 	printf("strnstr:%s, ft_strnstr:%s.\n", strnstr(a, b, len), ft_strnstr(a, b, len));
 	return 0;
-} */
+}
 
 int main(void)
 {
 	char *a = "    -214748364 8";
 	printf("%d, %d, atoi:%d, ft_atoi:%d.\n", INT_MAX, INT_MIN, atoi(a), ft_atoi(a));
 	return 0;
+} 
+
+void	test_ft_strdup(const char *a)
+{
+	char *b = ft_strdup(a);
+	char *c = strdup(a);
+	if (b != NULL)
+	{
+		printf("ft_strdup:%s.\n", b);
+		free(b);
+	}
+	else
+		printf("allocation failed for ft_strdup\n");
+	if (c != NULL)
+	{
+		printf("strdup:%s.\n", c);
+		free(c);
+	}
+	else
+		printf("allocation failed for strdup\n");
 }
+
+int main(void)
+{
+	test_ft_strdup("");
+	//test_ft_strdup(NULL); //strdup segfaults with NULL string
+	test_ft_strdup("wee");
+	/*char *a = (char *)malloc(10000);
+	if (a)
+	{
+		ft_memset(a, 'a', 9999);
+		a[9999] = '\0';
+		test_ft_strdup(a);
+		free(a);
+	}
+	else
+		printf("failed mem allocation for v long string\n"); */
+	return 0;
+}*/
+
+

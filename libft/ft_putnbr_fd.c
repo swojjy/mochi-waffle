@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ankoh <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/29 13:31:32 by ankoh             #+#    #+#             */
-/*   Updated: 2024/06/29 14:11:25 by ankoh            ###   ########.fr       */
+/*   Created: 2024/06/29 15:41:02 by ankoh             #+#    #+#             */
+/*   Updated: 2024/06/29 15:41:30 by ankoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+void	ft_putnbr_fd(int n, int fd)
 {
-	char	*newstr;
-	size_t	slen;
 
-	slen = ft_strlen(s);
-	newstr = (char *)malloc(slen + 1);
-	if (newstr == NULL)
-		return (NULL);
-	ft_strlcpy(newstr, s, slen + 1);
-	return (newstr);
 }

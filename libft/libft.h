@@ -6,7 +6,7 @@
 /*   By: ankoh <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 19:11:09 by ankoh             #+#    #+#             */
-/*   Updated: 2024/06/29 01:07:16 by bloopwe          ###   ########.fr       */
+/*   Updated: 2024/06/29 14:19:04 by ankoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,6 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_atoi(const char *nptr);
 void	*ft_calloc(size_t nmemb, size_t size);
+char	*ft_strdup(const char *s);
 
 #endif /* LIBFT_H */
