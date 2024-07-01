@@ -6,7 +6,7 @@
 /*   By: ankoh <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/29 15:36:36 by ankoh             #+#    #+#             */
-/*   Updated: 2024/06/29 15:37:22 by ankoh            ###   ########.fr       */
+/*   Updated: 2024/07/01 19:16:56 by bloopwe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,14 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
+	unsigned int	i;
 
+	i = 0;
+	if (!s || !f)
+		return ;
+	while (s[i])
+	{
+		f(i, s + i);
+		i++;
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: ankoh <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/29 15:39:46 by ankoh             #+#    #+#             */
-/*   Updated: 2024/06/29 15:40:24 by ankoh            ###   ########.fr       */
+/*   Updated: 2024/07/01 23:52:46 by bloopwe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,8 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-
+	if (!s || !fd)
+		return ;
+	write(fd, s, ft_strlen(s));
+	write(fd, "\n", 1);
 }
