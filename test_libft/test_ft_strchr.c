@@ -2,25 +2,27 @@
 #include <stdio.h>
 #include <string.h>
 
-void	test_ft_strchr(const char *s, int c)
+void    test_ft_strchr(char const *s, int c)
 {
-	char *a = strchr(s, c);
-	char *b = ft_strchr(s, c);
-	if (a == b)
-		printf("%s: strchr: %s, ft_strchr: %s.\n", s, a, b);
-	else
-		printf("%s: doesnt match\n", s);
+    char *a = ft_strchr(s, c);
+    char *b = strchr(s, c);
+    printf("%s, %d. ft_strchr: %s. strchr: %s\n", s, c, a, b);
 }
 
-int	main(void)
+int main()
 {
-	test_ft_strchr("abcda", 'a');
-	test_ft_strchr("abced", 'b');
-	test_ft_strchr("sdlskdjfl", '\0');
-	test_ft_strchr("abcd", '#');
-	test_ft_strchr("abcde", 300);
-	test_ft_strchr("", 'a');
-	test_ft_strchr("abcd", -1);
-	//test_ft_strchr("abc", '');
-	return 0;
+    test_ft_strchr("ploop", 'o');
+    test_ft_strchr("ploop", 1024);
+    test_ft_strchr("ploop", '\0');
+    test_ft_strchr("ploop", 'a');
+    test_ft_strchr("ploop", '!');
+    return 0;
 }
+
+/*
+
+strchr and strrchr casts c to unsigned char - 
+need to mimic the way it handles c < 0 or c > 255 (c % 256)
+ie use (unsigned char)c
+
+*/

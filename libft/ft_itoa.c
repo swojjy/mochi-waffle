@@ -12,16 +12,6 @@
 
 #include "libft.h"
 
-static long	ft_abs_val(long i, int *isneg)
-{
-	if (i < 0)
-	{
-		i = -i;
-		*isneg = 1;
-	}
-	return (i);
-}
-
 static int	ft_lenofi(int i)
 {
 	int	len;
@@ -42,8 +32,10 @@ char	*ft_itoa(int n)
 	size_t	len;
 	char	*a;
 
-	isneg = 0;
-	i = (ft_abs_val(n, &isneg));
+	i = n;
+	isneg = (i < 0);
+	if (isneg == 1)
+		i = -i;
 	len = ft_lenofi(i);
 	a = (char *)malloc(sizeof(char) * (len + isneg + 1));
 	if (!a)
@@ -59,3 +51,17 @@ char	*ft_itoa(int n)
 		a[0] = '-';
 	return (a);
 }
+
+/*
+	isneg = 0;
+	i = (ft_abs_val(n, &isneg));
+	
+static long	ft_abs_val(long i, int *isneg)
+{
+	if (i < 0)
+	{
+		i = -i;
+		*isneg = 1;
+	}
+	return (i);
+}*/

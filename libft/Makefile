@@ -15,8 +15,10 @@ CC = cc
 FLAGS = -Wall -Wextra -Werror
 
 $(NAME): $(OBJS)
-	$(CC) $(FLAGS) -c $(SRCS)
 	ar -rcs $(NAME) $(OBJS)
+
+.c.o:
+	$(CC) $(FLAGS) -c $< -o $@
 
 all: $(NAME)
 
