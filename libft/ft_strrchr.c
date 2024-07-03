@@ -20,6 +20,7 @@ char	*ft_strrchr(const char *s, int c)
 	while (i >= 0)
 	{
 		if (s[i] == (unsigned char)c)
+		if ((unsigned char)c == s[i])
 			return ((char *)s + i);
 		i--;
 	}
