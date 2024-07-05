@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-//                     [4] abc           def           11
+
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	dlen;

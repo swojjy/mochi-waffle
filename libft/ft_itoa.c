@@ -33,11 +33,11 @@ char	*ft_itoa(int n)
 	char	*a;
 
 	i = n;
-	isneg = (i < 0);
+	isneg = i < 0;
 	if (isneg == 1)
 		i = -i;
 	len = ft_lenofi(i);
-	a = (char *)malloc(sizeof(char) * (len + isneg + 1));
+	a = malloc(sizeof(char) * (len + isneg + 1));
 	if (!a)
 		return (NULL);
 	a[len + isneg] = '\0';
@@ -51,17 +51,3 @@ char	*ft_itoa(int n)
 		a[0] = '-';
 	return (a);
 }
-
-/*
-	isneg = 0;
-	i = (ft_abs_val(n, &isneg));
-	
-static long	ft_abs_val(long i, int *isneg)
-{
-	if (i < 0)
-	{
-		i = -i;
-		*isneg = 1;
-	}
-	return (i);
-}*/
