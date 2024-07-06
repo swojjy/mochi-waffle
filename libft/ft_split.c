@@ -61,10 +61,9 @@ static char	*ft_allocstrs(char const *s, char c, size_t *n)
 		len++;
 		(*n)++;
 	}
-	str = (char *)malloc(sizeof(char) * (len + 1));
+	str = ft_substr(s, start, len);
 	if (!str)
 		return (NULL);
-	ft_strlcpy(str, &s[start], len + 1);
 	return (str);
 }
 

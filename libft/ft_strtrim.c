@@ -26,9 +26,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	z = ft_strlen(s1);
 	while (z > a && ft_strchr(set, s1[z - 1]))
 		z--;
-	str = (char *)malloc(sizeof(char) * (z - a + 1));
+	str = ft_substr(s1 + a, 0, z - a);
 	if (!str)
 		return (NULL);
-	ft_strlcpy(str, s1 + a, z - a + 1);
 	return (str);
 }

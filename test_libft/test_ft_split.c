@@ -10,7 +10,7 @@ void test_ft_split(char const *testname, char const *s, char c)
 	{
 		while (a[i])
 		{
-			printf("%s\n", a[i]);
+			printf("\"%s\"\n", a[i]);
 			free(a[i]);
 			i++;
 		}
